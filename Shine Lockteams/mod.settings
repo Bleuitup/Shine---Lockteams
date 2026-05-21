@@ -1,0 +1,8 @@
+name        = "Shine Lockteams V2"
+source_dir  = "source/"
+output_dir  = "output/"
+description = [=[Shine Lockteams V2 - 2026 Reupload]=]
+image       = "preview.jpg"
+tag_modtype = "Tool"
+tag_support = "Must be run on Server"
+publish_id = 3730361484
