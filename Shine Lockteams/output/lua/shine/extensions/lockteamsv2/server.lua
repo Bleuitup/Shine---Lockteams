@@ -1,5 +1,5 @@
 local Plugin = {}
-Plugin.Version = "2.1"
+Plugin.Version = "2.2"
 Plugin.HasConfig = true
 Plugin.ConfigName = "LockTeamsV2.json"
 
@@ -49,10 +49,16 @@ function Plugin:UnlockTeams()
 end
 
 function Plugin:CreateCommands()
-    local LockTeamsCommand = self:BindCommand("sh_lockteamsv2", "lock", self.LockTeams, false)
+    -- Shine invokes command handlers as Func( Client, ... ) without binding self,
+    -- so wrap the plugin methods in closures that capture the plugin instance.
+    local LockTeamsCommand = self:BindCommand("sh_lockteamsv2", "lock", function( Client )
+        self:LockTeams()
+    end, false)
     LockTeamsCommand:Help("Lock both teams and prevent players from joining.")
 
-    local UnlockTeamsCommand = self:BindCommand("sh_unlockteamsv2", "unlock", self.UnlockTeams, false)
+    local UnlockTeamsCommand = self:BindCommand("sh_unlockteamsv2", "unlock", function( Client )
+        self:UnlockTeams()
+    end, false)
     UnlockTeamsCommand:Help("Unlock both teams and allow players to join.")
 end
 
