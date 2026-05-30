@@ -1,7 +1,14 @@
 name        = "Shine Lockteams V2"
-source_dir  = "source/"
-output_dir  = "output/"
-description = [=[Shine Lockteams V2 - 2026 Reupload]=]
+source_dir  = "source"
+output_dir  = "output"
+description = [=[mod id 3730361484
+
+Shine Lockteams V2 - 2026 Reupload
+
+This is a reupload with minor upgrades of Tik's old Shine Lock teams, 99% of the credit of this mod goes to him.
+This mod exists only because Tik has disappeared from the face of the earth, we bid him farewell and hope he returns soon. In the meantime this mod will do.
+
+New functionalities include a private (non public non alltalk) join message and getting auto sent to spec if you spam join attempts.]=]
 image       = "preview.jpg"
 tag_modtype = "Tool"
 tag_support = "Must be run on Server"
